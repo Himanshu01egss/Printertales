@@ -26,11 +26,40 @@
                            <div class="desc">
                               {!! $blog->description !!}
                            </div>
+                           
+                           @if(count($blog->faq)>0)
+                           <div class="card-block mb-5">
+                              <h3 class="">FAQs</h3>
+                           </div>
+                           <!--new faq add -->
                            <div class="faq-content mb-5">
                               <div class="accordion" id="accordionExample">
+                                 @php
+                                    $i=1;
+                                 @endphp
+                                 @foreach($blog->faq as $faq)
+                                 <div class="card m-0">
+                                    <div class="card-header" id="heading{{$i}}">
+                                       <h4 class="mb-0 @if($i!=1){{'collapsed '}}@endif" data-toggle="collapse" data-target="#collapse{{$i}}" aria-expanded="@if($i==1){{'true '}}@endif" aria-controls="collapse{{$i}}">
+                                         {{$faq->question}}
+                                       </h4>
+                                    </div>
+                                    <div id="collapse{{$i}}" class="collapse @if($i==1){{'show '}}@endif" aria-labelledby="heading{{$i}}" data-parent="#accordionExample" style="">
+                                       <div class="card-body">
+                                          <p>
+                                             {{$faq->answer}}
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 @php
+                                    $i++;
+                                 @endphp
+                                 @endforeach
+
                               </div>
                            </div>
-                           <!--end new faq-->
+                           @endif
                            <div class="blog-link">
                               <ul class="social-media d-flex">
                                  <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{$blog->slug}}" target="_blank"><i class="fab fa-facebook"></i></a></li>

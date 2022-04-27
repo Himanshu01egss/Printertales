@@ -67,8 +67,13 @@ Route::get('/admin',[AdminController::class, 'index'])->name('admin');
 
 Route::get('/',[FrontController::class,'index'])->name('home');
 Route::get('contact',[FrontController::class,'contact'])->name('contact');
+Route::post('contact',[FrontController::class,'submitcontact']);
+Route::get('support',[FrontController::class,'support'])->name('support');
 Route::get('knowledgebase',[FrontController::class,'blog'])->name('blog');
 Route::get('knowledgebase/{slug}',[FrontController::class,'blogdetail']);
 
+Route::post('homesearch',[FrontController::class,'homesearch'])->name('homesearch');
+Route::get('{slug1}/{slug2}',[FrontController::class, 'printerdetails']);
+Route::get('{slug}',[FrontController::class, 'details']);
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Route::get('/knowledgebase', [HomeController::class, 'blog'])->name('blog');

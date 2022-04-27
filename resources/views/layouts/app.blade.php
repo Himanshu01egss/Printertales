@@ -35,13 +35,12 @@
       <link href="{{asset('public/assets/css/bootsnav.css')}}" rel="stylesheet" />
       <link href="{{asset('public/assets/css/style.css')}}" rel="stylesheet">
       <link href="{{asset('public/assets/css/responsive.css')}}" rel="stylesheet" />
+      <link href="{{asset('public/assets/css/support.css')}}" rel="stylesheet" />
+
       <link rel="stylesheet" href="{{asset('public/assets/css/jquery-ui.css')}}">
       <link rel="stylesheet" href="{{asset('public/assets/css/colorchange.css')}}">
       <link rel="stylesheet" href="{{asset('public/assets/css/jquery-ui-timepicker-addon.css')}}">
-      <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" media="screen"
-         href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
-      
+      <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
       <style>
          .pronter-list ul li.hidden { border-bottom:none; display: none;}
          .banner-area{ overflow: initial;  }
@@ -72,6 +71,15 @@
             border-bottom:none;
             display: none;
         }
+        .pronter-list ul li.hidden {
+      border-bottom: none;
+      display: none;
+      }
+      .themodal {
+      position: absolute;
+      top: 50%;
+      width: 70%;
+      }
       </style>
    </head>
    <body class="index">
@@ -112,89 +120,12 @@
                   </li>
                </ul>
             </div>
-            <!-- End Atribute Navigation -->
-            <div class="manual-list1">
-               <ul class="list-unstyled">
-                  <a href="/hp/hp-deskjet-plus-4155/">HP&nbsp;> HP DeskJet Plus 4155</a>
-                  <a href="/hp/hp-deskjet-3755/">HP&nbsp;> HP DeskJet 3755</a>
-                  <a href="/hp/hp-officejet-pro-9015e/">HP&nbsp;> HP OfficeJet Pro 9015e</a>
-                  <a href="/hp/hp-deskjet-2755/">HP&nbsp;> HP DeskJet 2755</a>
-                  <a href="/canon/2986c002-pixma-ts6220-wireless-photo-printer/">Canon&nbsp;> 2986C002 PIXMA TS6220 Wireless Photo Printer</a>
-                  <a href="/canon/pixma-mg3620-wireless-color-inkjet-printer/">Canon&nbsp;> PIXMA MG3620 Wireless Color Inkjet Printer</a>
-                  <a href="/canon/ts5120-wireless-printer/">Canon&nbsp;> TS5120 Wireless Printer</a>
-                  <a href="/canon/wireless-pixma-ts9120-inkjet-printer/">Canon&nbsp;> Wireless Pixma TS9120 Inkjet Printer</a>
-                  <a href="/brother/hl-l3270cdw/">Brother&nbsp;> HL-L3270CDW</a>
-                  <a href="/brother/hl-l8260cdw-wireless-colour-laser-printer/">Brother&nbsp;> HL-L8260CDW Wireless Colour Laser Printer</a>
-                  <a href="/brother/dcp-l3510cdw-3-in-1-wireless-colour-led-laser-printer/">Brother&nbsp;> DCP-L3510CDW 3-in-1 Wireless colour LED laser printer </a>
-                  <a href="/brother/dcp-l3550cdw-3-in-1-wireless-colour-led-printer-with-touchscreen-display/">Brother&nbsp;> DCP-L3550CDW 3-in-1 wireless colour LED printer with touchscreen display</a>
-                  <a href="/epson/ecotank-l3110-multi-function-inkjet-printer/">Epson&nbsp;> EcoTank L3110 Multi Function Inkjet Printer</a>
-                  <a href="/epson/l3150-multi-function-inkjet-printer/">Epson&nbsp;> L3150 Multi Function Inkjet Printer</a>
-                  <a href="/epson/l130-single-function-inkjet-printer/">Epson&nbsp;> L130 Single Function Inkjet Printer</a>
-                  <a href="/epson/ecotank-m1170-single-function-inkjet-printer/">Epson&nbsp;> EcoTank M1170 Single Function Inkjet Printer</a>
-                  <a href="/lexmark/lexmark-cs510dte-a4-colour-laser-printer/">Lexmark&nbsp;> Lexmark CS510dte A4 Colour Laser Printer</a>
-                  <a href="/lexmark/lexmark-cs725de-a4-colour-laser-printer/">Lexmark&nbsp;> Lexmark CS725de A4 Colour Laser Printer</a>
-                  <a href="/lexmark/lexmark-cs820de-a4-colour-laser-printer/">Lexmark&nbsp;> Lexmark CS820de A4 Colour Laser Printer</a>
-                  <a href="/lexmark/lexmark-cs720dte-a4-colour-laser-printer/">Lexmark&nbsp;> Lexmark CS720dte A4 Colour Laser Printer</a>
-                  <a href="/lexmark/lexmark-cs725dte-a4-colour-laser-printer/">Lexmark&nbsp;> Lexmark CS725dte A4 Colour Laser Printer</a>
-                  <a href="/lexmark/lexmark-cs827de-a4-colour-laser-printer/">Lexmark&nbsp;> Lexmark CS827de A4 Colour Laser Printer</a>
-                  <a href="/lexmark/lexmark-c2535dw-a4-colour-laser-printer/">Lexmark&nbsp;> Lexmark C2535dw A4 Colour Laser Printer</a>
-                  <a href="/lexmark/lexmark-b2236dw--monochrome/">Lexmark&nbsp;> Lexmark B2236dw- Monochrome</a>
-                  <a href="/lexmark/lexmark-b2338dw-monochrome/">Lexmark&nbsp;> Lexmark B2338dw- Monochrome</a>
-                  <a href="/lexmark/lexmark-mc3224i-color-laser/">Lexmark&nbsp;> Lexmark MC3224i Color laser</a>
-                  <a href="/lexmark/lexmark-mb2236i-monochrome/">Lexmark&nbsp;> Lexmark MB2236i - Monochrome</a>
-                  <a href="/lexmark/lexmark-b3340dw-monochrome/">Lexmark&nbsp;> Lexmark B3340dw - Monochrome</a>
-                  <a href="/brother/hl-l3210cw-colour-wireless-led-printer/">Brother&nbsp;> HL-L3210CW Colour Wireless LED printer</a>
-                  <a href="/brother/mfc-j5335dw-a4-wireless-inkjet-printer/">Brother&nbsp;> MFC-J5335DW A4 Wireless Inkjet Printer</a>
-                  <a href="/brother/mfc-j895dw-all-in-one-wireless-inkjet-printer--nfc/">Brother&nbsp;> MFC-J895DW All-in-one Wireless Inkjet Printer + NFC</a>
-                  <a href="/brother/dcp-j774dw-wireless-3-in-1-inkjet-printer/">Brother&nbsp;> DCP-J774DW Wireless 3-in-1 Inkjet Printer</a>
-                  <a href="/brother/mfc-j497dw-wireless-4-in-1-inkjet-printer/">Brother&nbsp;> MFC-J497DW Wireless 4-in-1 Inkjet Printer</a>
-                  <a href="/brother/mfc-j491dw-wireless-4-in-1-inkjet-printer/">Brother&nbsp;> MFC-J491DW Wireless 4-in-1 Inkjet Printer</a>
-                  <a href="/brother/dcp-l2510d-compact-3-in-1-mono-laser-printer/">Brother&nbsp;> DCP-L2510D Compact 3-in-1 Mono Laser Printer</a>
-                  <a href="/hp/hp-laserjet-pro-m15w-printer/">HP&nbsp;> HP LaserJet Pro M15w Printer</a>
-                  <a href="/epson/epson-workforce-pro-wf-c869r-dtwf/">Epson&nbsp;> Epson Workforce Pro WF-C869R DTWF</a>
-                  <a href="/epson/epson-aculaser-cx37dtnf/">Epson&nbsp;> Epson AcuLaser CX37DTNF Printer</a>
-                  <a href="/epson/workforce-wf-100-single-function-inkjet-printer/">Epson&nbsp;> WorkForce WF-100 Single Function Inkjet Printer</a>
-                  <a href="/knowledgebase/how-to-solve-the-dell-printer-error-009-654">How To Solve The Dell Printer Error 009-654?  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/how-to-get-rid-of-error-5b00-on-canon-printer">How to Get Rid of Error 5b00 on Canon Printer  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/3-common-printer-issues-and-their-quick-solutions">3 Common Printer Issues And Their Quick Solutions  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/how-to-solve-the-canon-printer-error-code-u043">How To Solve The Canon Printer Error Code U043  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/fix-paper-jam-driver-problems-cartridge-issues-with-these-tips">Fix Paper Jam, Driver Problems, Cartridge Issues with These Tips  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/book-a-service">Book A Service  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/scan-doctor">Scan Doctor  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/printer-issue-after-windows-update">Printer Issue after Windows Update  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/printer-setup-issue">Printer Setup Issue  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/printer-offline-error">Printer Offline error  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/printer-driver-issue">Printer Driver Issue  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/printer-job-stuck-in-queue">Printer Job Stuck in Queue  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/printer-jam-issue">Printer Jam Issue  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/4-methods-to-fix-cartridge-issues-on-your-printer">4 Methods to Fix Cartridge Issues on Your Printer  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/3-quick-solutions-to-fix-a-printer-in-error-state">3 Quick Solutions to Fix A Printer in Error State  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/how-to-easily-update-hp-printer-firmware">How to Easily Update HP Printer Firmware?  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/6-tips-for-troubleshooting-printer-problems">6 Tips for Troubleshooting Printer Problems  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/learn-to-set-up-your-wireless-printer-on-windows-10">Learn To Set Up Your Wireless Printer On Windows 10  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/4-best-color-laser-printers-for-quality-printing">4 Best Color Laser Printers for Quality Printing in 2022  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/5-best-inkjet-printers-at-affordable-prices">5 Best Inkjet Printers At Affordable Prices In 2022  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/4-best-cheap-printers-with-good-features">4 Best Cheap Printers with Good Features in 2022  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/solutions-to-3-common-epson-printer-error-codes">Solutions to 3 Common Epson Printer Error Codes  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/4-common-canon-printer-error-codes--how-to-solve-them">4 Common Canon Printer Error Codes & How To Solve Them  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/common-hp-printer-errors-causes-and-solutions">Common HP Printer Errors, Causes, And Solutions  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/3-most-common-ricoh-printer-error-codes">3 Most Common Ricoh Printer Error Codes (With Solutions)  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/easy-methods-to-install-epson-printer-step-by-step">Easy Methods To Install Epson Printer Step-by-Step  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/how-to-connect-wirelesswired-epson-printer-to-your-laptop">How To Connect Wireless/Wired Epson Printer To Your Laptop  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/the-new-ankermake-m5-3d-printer-review">The New AnkerMake M5 3D Printer Review: Impressive Features  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/3-best-brother-printers-for-your-business">3 Best Brother Printers for Your Business in 2022  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/inkless-printer-review">Inkless Printer Review: What Is It? Features, Benefits, And More  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/how-to-download-canon-printer-drivers-and-software">How to Download Canon Printer Drivers and Software?  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/inkjet-vs-laser-which-printer-should-you-choose">Inkjet Vs. Laser: Which Printer Should You Choose?  <i class="fa fa-angle-right "></i></a>
-                  <a href="/knowledgebase/8-factors-to-know-about-hp-instant-ink-before-signing-up">8 Factors To Know About HP Instant Ink Before Signing Up  <i class="fa fa-angle-right "></i></a>
-               </ul>
-            </div>
-            <!-- Start Header Navigation -->
+            
             <div class="navbar-header">
                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                <i class="fa fa-bars"></i>
                </button>
-               <a class="navbar-brand" href="/">
+               <a class="navbar-brand" href="{{url('/')}}">
                <img src="@if($settings) {{url('public/'.$settings->logo)}} @endif" class="logo" alt="printertales logo" />
                </a>
             </div>
@@ -220,75 +151,7 @@
                   <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">All PRINTER</a>
                      <ul class="dropdown-menu child fadeOutUp" style="display: none; opacity: 1;">
-                        <li class="dropdown list">
-                           <a href="#" class="dropdown">HP</a>
-                           <ul class="dropdown_child">
-                              <li>
-                                 <a href="/hp/hp-deskjet-plus-4155/">HP DeskJet Plus 4155</a>
-                              </li>
-                              <li>
-                                 <a href="/hp/hp-deskjet-3755/">HP DeskJet 3755</a>
-                              </li>
-                              <li>
-                                 <a href="/hp/hp-officejet-pro-9015e/">HP OfficeJet Pro 9015e</a>
-                              </li>
-                              <li>
-                                 <a href="/hp/hp-deskjet-2755/">HP DeskJet 2755</a>
-                              </li>
-                           </ul>
-                        </li>
-                        <li class="dropdown list">
-                           <a href="#" class="dropdown">Canon</a>
-                           <ul class="dropdown_child">
-                              <li>
-                                 <a href="/canon/2986c002-pixma-ts6220-wireless-photo-printer/">2986C002 PIXMA TS6220 Wireless Photo Printer</a>
-                              </li>
-                              <li>
-                                 <a href="/canon/pixma-mg3620-wireless-color-inkjet-printer/">PIXMA MG3620 Wireless Color Inkjet Printer</a>
-                              </li>
-                              <li>
-                                 <a href="/canon/ts5120-wireless-printer/">TS5120 Wireless Printer</a>
-                              </li>
-                              <li>
-                                 <a href="/canon/wireless-pixma-ts9120-inkjet-printer/">Wireless Pixma TS9120 Inkjet Printer</a>
-                              </li>
-                           </ul>
-                        </li>
-                        <li class="dropdown list">
-                           <a href="#" class="dropdown">Brother</a>
-                           <ul class="dropdown_child">
-                              <li>
-                                 <a href="/brother/hl-l3210cw-colour-wireless-led-printer/">HL-L3210CW Colour Wireless LED printer</a>
-                              </li>
-                              <li>
-                                 <a href="/brother/hl-l8260cdw-wireless-colour-laser-printer/">HL-L8260CDW Wireless Colour Laser Printer</a>
-                              </li>
-                              <li>
-                                 <a href="/brother/dcp-l3510cdw-3-in-1-wireless-colour-led-laser-printer/">DCP-L3510CDW 3-in-1 Wireless colour LED laser printer</a>
-                              </li>
-                              <li>
-                                 <a href="/brother/dcp-l3550cdw-3-in-1-wireless-colour-led-printer-with-touchscreen-display/">DCP-L3550CDW 3-in-1 wireless colour LED printer with touchscreen display</a>
-                              </li>
-                           </ul>
-                        </li>
-                        <li class="dropdown list">
-                           <a href="#" class="dropdown">Epson</a>
-                           <ul class="dropdown_child">
-                              <li>
-                                 <a href="/epson/ecotank-l3110-multi-function-inkjet-printer/">EcoTank L3110 Multi Function Inkjet Printer</a>
-                              </li>
-                              <li>
-                                 <a href="/epson/l3150-multi-function-inkjet-printer/">L3150 Multi Function Inkjet Printer</a>
-                              </li>
-                              <li>
-                                 <a href="/epson/l130-single-function-inkjet-printer/">L130 Single Function Inkjet Printer</a>
-                              </li>
-                              <li>
-                                 <a href="/epson/ecotank-m1170-single-function-inkjet-printer/">EcoTank M1170 Single Function Inkjet Printer</a>
-                              </li>
-                           </ul>
-                        </li>
-                     </ul>
+                  </ul>
                   </li>
                </ul>
             </div>
@@ -325,19 +188,19 @@
                         <h4 class="widget-title">Company</h4>
                         <ul>
                            <li>
-                              <a href="/">Home</a>
+                              <a href="{{url('/')}}">Home</a>
                            </li>
                            <li>
-                              <a href="/knowledgebase">Knowledge Base</a>
+                              <a href="{{url('knowledgebase')}}">Knowledge Base</a>
                            </li>
                            <li>
-                              <a href="/support">Support</a>
+                              <a href="{{url('support')}}">Support</a>
                            </li>
                            <li>
-                              <a href="/contact">Contact Us</a>
+                              <a href="{{url('contact')}}">Contact Us</a>
                            </li>
                            <li>
-                              <a href="/service">Service</a>
+                              <a href="{{url('service')}}">Service</a>
                            </li>
                         </ul>
                      </div>
@@ -345,32 +208,7 @@
                   <div class="col-lg-2 col-md-6 col-6 item">
                      <div class="f-item link">
                         <h4 class="widget-title">Issues We Resolve</h4>
-                        <ul>
-                           <li>
-                              <a href="https://printertales.com/knowledgebase/printer-driver-issue">Printer Driver</a>
-                           </li>
-                           <li>
-                              <a href="https://printertales.com/knowledgebase/book-a-service">Book a Service</a>
-                           </li>
-                           <li>
-                              <a href="https://printertales.com/knowledgebase/printer-job-stuck-in-queue">Printer Job Stuck in Queue</a>
-                           </li>
-                           <li>
-                              <a href="https://printertales.com/knowledgebase/scan-doctor">Scan Doctor</a>
-                           </li>
-                           <li>
-                              <a href="https://printertales.com/knowledgebase/printer-setup-issue">Printer Setup Issue</a>
-                           </li>
-                           <li>
-                              <a href="https://printertales.com/knowledgebase/printer-offline-error">Printer Offline</a>
-                           </li>
-                           <li>
-                              <a href="https://printertales.com/knowledgebase/printer-jam-issue">Printer Jam Issue</a>
-                           </li>
-                           <li>
-                              <a href="https://printertales.com/knowledgebase/printer-issue-after-windows-update">Printer Issue After Windows Update</a>
-                           </li>
-                        </ul>
+                      
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6 item">
@@ -507,6 +345,7 @@
       </div>
       <a id="back2Top" class="theme-bg" title="Back to top" href="javascript-void(0)" style="display: block;"><i class="ti-arrow-up"></i></a>
       <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      {{-- <script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
       <script src="{{asset('public/assets/js/popper.min.js')}}"></script>
       <script src="{{asset('public/assets/js/bootstrap.min.js')}}"></script>
       <script src="{{asset('public/assets/js/equal-height.min.js')}}"></script>
@@ -645,6 +484,56 @@
     $( "#datepicker" ).datepicker();
   } );
    </script>
+   <script>
+      $("#thesearch").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $(".single-item ").filter(function () {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+      });
+  </script>
      <script src="{{asset('public/assets/js/carousel2.js')}}"></script>
+   
+     <script>
+      $(document).ready(function(){
+      
+      function load_data(full_text_search_query = '')
+       {
+        var _token = $("input[name=_token]").val();
+         console.log(_token);
+        $.ajax({
+         url:"{{ route('homesearch') }}",
+         method:"POST",
+         data:{full_text_search_query:full_text_search_query, _token:_token},
+         dataType:"json",
+         success:function(data)
+         {
+            console.log(data)
+          var output = '';
+          if(data.length > 0)
+          {
+           for(var count = 0; count < data.length; count++)
+           {
+            output += '<li>Knowledgebase | <a href={{url('knowledgebase')}}/'+data[count].slug+'>'+data[count].title+'</a></li>';
+           }
+          }
+          else
+          {
+           output += '<p colspan="6">No Data Found</p>';
+          }
+          $(".manual-list").css("display", "block");
+          $('.list-unstyled').html(output);
+         }
+        });
+       }
+      
+       $('#homesearch').keyup(function(){
+        var full_text_search_query = $('#homesearch').val();
+        console.log(full_text_search_query);
+         load_data(full_text_search_query);
+       });
+      
+      });
+      </script>  
    </body>
 </html>

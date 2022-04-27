@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Crypt;
 class PrintersController extends Controller
 {
     public function index(){
-        $printer = Printer::with('brand')->with('features')->with('errors')->with('faq')->get();
+        $printer = Printer::with('brand')->with('features')->with('errors')->with('faq')->orderby('id','desc')->get();
         return view('admin.printers.list',compact('printer'));
     }
     public function create(){

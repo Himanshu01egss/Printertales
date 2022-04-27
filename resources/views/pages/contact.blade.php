@@ -25,7 +25,7 @@
                         <label for="name">Name : </label>
                      </div>
                      <div class="col-sm-9 mb-4">
-                        <input type="text" class="form-control" id="name" name="name" placeholder=" " required="">
+                        <input type="text" class="form-control" id="name" name="name"  required="">
                      </div>
                   </div>
                   <div class="row">
@@ -33,7 +33,7 @@
                         <label for="name">Mobile : </label>
                      </div>
                      <div class="col-sm-9 mb-4">
-                        <input type="text" class="form-control" id="name" name="phone" placeholder=" " required="">
+                        <input type="text" class="form-control" id="name" name="phone"  required="">
                      </div>
                   </div>
                   <div class="row mb-3">
@@ -41,7 +41,7 @@
                         <label for="name"> Email : </label>
                      </div>
                      <div class="col-sm-9 mb-4">
-                        <input type="email" class="form-control" id="name" name="email" placeholder=" " required="">
+                        <input type="email" class="form-control" id="name" name="email"  required="">
                      </div>
                   </div>
                   <div class="row">
@@ -49,9 +49,9 @@
                         <label for="name">Date : </label>
                      </div>
                      <div class="col-sm-9 mb-4">
-                        <input type="date" class="form-control" name="date" id="" placeholder=" " required="">
+                        <input type="date" class="form-control" name="date" required="">
                      </div>
-                     <input type="hidden" class="form-control" id="name" name="" value="" placeholder=" ">
+                     <input type="hidden" class="form-control" id="name" name="ip" >
                      <div class="col-sm-12 text-center">
                         <button class="btn btn-primary w-50" name="submit" type="submit">Submit </button>
                      </div>

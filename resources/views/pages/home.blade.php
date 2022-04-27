@@ -5,7 +5,8 @@
       <div class="banner-search cst-search">
          <h1 class="text-white">Welcome To Printer Tales</h1>
          <form class='prsearch' method="post" >
-            <input type="text" id="search" placeholder="How Can We Help You..." class="form-control rounded-5" name="str" autocomplete="off" required />
+            @csrf
+            <input type="text" id="homesearch" placeholder="How Can We Help You..." class="form-control rounded-5" name="str" autocomplete="off" required />
             <button type="submit" name="submit" class="btn btn-secondary input-group-append">  <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
          </form>
          <div class="manual-list">
@@ -70,7 +71,7 @@
       	<div class="row">
          	<div class="col-lg-8 offset-lg-2">
             	<div class="site-heading text-center">
-               	<h2>LearniSfdsfdng and training</h2>
+               	<h2>Learning and training</h2>
             	</div>
          	</div>
       	</div>

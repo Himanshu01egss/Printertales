@@ -13,4 +13,8 @@ class Blog extends Model
     {
         return $this->belongsTo(Brand::class);
     }
+
+    public function faq(){
+        return $this->hasMany(Blogfaq::class);
+    }
 }
