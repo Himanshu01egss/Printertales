@@ -70,7 +70,7 @@
       	<div class="row">
          	<div class="col-lg-8 offset-lg-2">
             	<div class="site-heading text-center">
-               	<h2>Learning and training</h2>
+               	<h2>LearniSfdsfdng and training</h2>
             	</div>
          	</div>
       	</div>
