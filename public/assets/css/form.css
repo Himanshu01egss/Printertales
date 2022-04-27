@@ -1,0 +1,262 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+button#prevBtn{
+       visibility: hidden;
+}
+
+
+.mainform #regForm {
+    background-color: #fff;
+    margin: 0px auto;
+    font-family: Raleway;
+    padding: 50px 40px 100px 40px;
+    width: 100%;
+    min-width: 600px;
+    box-shadow: 0 2px 3px #fff7f7;
+    border-radius: 20px;
+    border: 2px solid #e1e1e1;
+}
+
+.mainform h1 {
+  text-align: center;  
+}
+
+.mainform input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that get errors during validation: */
+.mainform input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.mainform .tab {
+  display: none;
+}
+
+.mainform button {
+    background-color: #b7b7b7;
+    color: #000000;
+    width: 100px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    font-weight: 200;
+    border-radius: 10px;
+}
+
+.mainform button:hover {
+  opacity: 0.8;
+}
+
+.mainform #prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Step marker: Place in the form. */
+.mainform .step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.mainform .step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.mainform .step.finish {
+  background-color: #4CAF50;
+}
+
+.modalshow #md1 , .modalshow #md2 ,.modalshow #md3 , .modalshow #md4 ,.modalselect ,.dotsre {display: none;}
+.modalshow #defaulter{display: block;}
+
+
+.modalselect  {
+    box-shadow: 0 1px 3px;
+    position: absolute;
+    width: 94%;
+    z-index: 99999999;
+    background: #fff;
+}
+.modalselect p {
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.modalselect p:hover {
+    box-shadow: 0 1px 3px;
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.modalshow img {
+    border-radius: 15px;
+    box-shadow: 0 2px 3px #3e3e3e;
+}
+
+
+.theme{
+       color: #0171ad;
+       text-align:center;
+}
+
+.mainbtn {
+    position: absolute;
+    top: 29em;
+    right: 38em;
+}
+
+.search {
+    background: #efefef;
+    padding: 10px 0;
+    margin-right: 0px;
+    margin-bottom:30px;
+    border-radius: 10px;
+}
+
+.icon {
+    text-align: center;
+}
+
+
+.icon i.fa {
+    font-size: 30px;
+    color: #0171ad;
+}
+
+
+.icon h6{
+    color:#302f2f;
+    text-align: left;
+}
+
+
+span.icon {
+    color: #302f2f;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mainform {
+     border: none; 
+    padding: 10px;
+}
+
+
+.chat-section {
+    background: #0171ad;
+    width: 219px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 20px;
+}
+
+.chat-section img {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.chat-section a{
+        font-size: 15px;
+}
+
+.brdl{
+    border-left: 2px solid #0171ad;
+}
+.modalshow h3.btn{
+    text-align:left;
+}
+
+
+form input {
+    border-radius: 8px;
+}
+
+.termsncondition p a{
+    color:#0171ad;
+}
+
+.helpcall p{
+    padding:0;
+    margin:0;
+}
+
+
+.helpcall p a {
+    color: #0171ad;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.helpcall span.icon{
+        font-size: 17px;
+}
+
+
+
+.pimgage {
+    position: absolute;
+    top: 26%;
+    right: 18%;
+    width: 30%;
+}
+
+.pimgage:before {
+    content: '';
+    position: absolute;
+    border-right: 2px solid;
+    width: 0px;
+    height: 100%;
+    left: -25px;
+    border-color: #0171ad;
+}
+
+.search {
+    background: #efefef;
+    padding: 2px 0;
+    margin-right: 0px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+
+.chaiting.default-padding {
+    box-shadow: 0 1px 3px;
+}
+
+
+
+
+
+
+

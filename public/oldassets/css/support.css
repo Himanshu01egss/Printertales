@@ -1,0 +1,297 @@
+#contact.default-padding {
+    padding-top: 120px;
+}
+
+h1.main-head {
+    padding-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-left: 40px;
+    text-transform: uppercase;
+}
+
+.main-head:before {
+    content: '';
+    background: #27b5ef;
+    height: 5px;
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+}
+h1.main-head span {
+    font-weight: 700;
+    color: #27b5ef;
+}
+
+.live-chat-m {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    max-width: 180px;
+    justify-content: end;
+    align-items: center;
+    background: #ffc107;
+    padding: 10px 15px;
+    border-radius: 10px 0 0 10px;
+}
+.live-chat-m img {
+    margin-right: 10px;
+    width: 30px;
+}
+.live-chat-m h4 {
+    color: #000;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+#regForm {
+    /* margin-top: 20px; */
+    background-color: #fff;
+    padding: 40px;
+    width: 100%;
+    min-width: 300px;
+    /* box-shadow: 0px 0px 3px #3dc6f5; */
+    /* border: 1px solid #3dc6f5; */
+    border-radius: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 160px;
+}
+
+#regForm .tab {
+    display: none;
+    min-height: 400px;
+    background: rgb(239, 239, 239);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+#regForm .tab .head-f {
+    /* padding: 19px 0; */
+    /* background-color: #77d3f7; */
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-bottom: 40px;
+}
+
+#regForm .tab .head-f h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+#regForm .check-box-sec .form-check {
+    padding: 10px;
+    border: 1px solid #0000000d;
+    background: #f7f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 5px 9px #e4e4e473;
+}
+#regForm .check-box-sec .form-check label {
+    display: block;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    display: block;
+    cursor: pointer;
+}
+#regForm .check-box-sec .form-check label img {
+    width: 50%;
+    cursor: pointer;
+}
+
+#regForm .check-box-sec .form-check input[type="radio"], .modal-body .form-check.check-model input[type="radio"] {
+    position: absolute;
+    min-height: 0px;
+    margin-left: 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+#regForm .check-box-sec .form-check label {
+    display: block;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    display: block;
+    cursor: pointer;
+}
+#regForm .btn {
+    margin-top: 0px;
+    display: inline-block;
+    background-color: #05d2f3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+#regForm .form-steps {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 70px;
+    visibility: hidden;
+}
+#regForm .step.finish {
+    background-color: #37c1ef;
+}
+#regForm .step.active {
+    background: #27b5ef;
+}
+#regForm .form-steps li:before {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 2px;
+    background: #bbb;
+    top: 100%;
+    left: 6px;
+}
+
+#regForm .form-steps li.step.last:before {
+    content: '';
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    background: #bbb;
+    top: 100%;
+    left: 6px;
+}
+
+#regForm .form-steps li {
+    margin-bottom: 40px;
+    list-style: none;
+    position: relative;
+}
+#regForm .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    /* display: inline-block; */
+    opacity: 1;
+}
+input {
+    border: 1px solid #e7e7e7;
+    border-radius: inherit;
+    box-shadow: inherit;
+    min-height: 50px;
+}
+
+.main-answer {
+    margin-right: 10px;
+    background: #efefef;
+    padding: 30px;
+    height: 100%;
+}
+.main-answer h3 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.answer-sec {
+    padding: 0 50px 0 0px;
+    margin-top: 45px;
+}
+.answer-sec .anstab h5 {
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    background: #27b5ef;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 19px;
+}
+.answer-sec .anstab p {
+    padding-left: 20px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+}
+
+
+
+@media (max-width:768px){
+   #regForm {
+    margin-top: 0;
+    background-color: #fff;
+    padding: 0;
+    width: 100%;
+    min-width: 100%;
+    /* box-shadow: 0px 0px 3px #3dc6f5; */
+    /* border: 1px solid #3dc6f5; */
+    border-radius: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+h1.main-head, #regForm .tab .head-f h2 {
+    font-size: 20px;
+    padding: 0px;
+}
+
+.live-chat-m{display:none;}
+
+#contact.default-padding {
+    padding-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
