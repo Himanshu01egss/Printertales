@@ -114,24 +114,39 @@
                                  <label for="alt">Alt</label>
                                  <input type="text" name="alt" class="form-control" id="alt" placeholder="Image Alt Tag" value="{{$printer->alt}}" required>
                               </div>
-                           </div>
-                           <div class="form-group clearfix">
-                              <label>
-                              Status: 
-                              </label>
-                              <div class="icheck-success d-inline">
-                                 <input type="radio" name="status" value="1" @if($printer->status==1) checked="" @endif id="radioSuccess1">
-                                 <label for="radioSuccess1">
-                                 Active
-                                 </label>
+                              <div class="form-group ">
+                                 <label> Status: </label>
+                                 <div class="icheck-success d-inline">
+                                    <input type="radio" name="status" value="1" @if($printer->status==1) checked="" @endif id="radioSuccess1">
+                                    <label for="radioSuccess1">
+                                    Active
+                                    </label>
+                                 </div>
+                                 <div class="icheck-danger d-inline">
+                                    <input type="radio" name="status" @if($printer->status==0) checked="" @endif value="0" id="radioDanger2">
+                                    <label for="radioDanger2">
+                                    Deactive
+                                    </label>
+                                 </div>
                               </div>
-                              <div class="icheck-danger d-inline">
-                                 <input type="radio" name="status" @if($printer->status==0) checked="" @endif value="0" id="radioDanger2">
-                                 <label for="radioDanger2">
-                                 Deactive
-                                 </label>
+                              <br/>
+                              <div class="form-group ">
+                                 <label> Popular: </label>
+                                 <div class="icheck-success d-inline">
+                                    <input type="radio" name="popular" value="1" id="radioSuccess11" @if($printer->popular == 1)checked="" @endif>
+                                    <label for="radioSuccess11" >
+                                    Active
+                                    </label>
+                                 </div>
+                                 <div class="icheck-danger d-inline">
+                                    <input type="radio" name="popular" value="0" @if($printer->popular == 0)checked="" @endif id="radioDanger2 2">
+                                    <label for="radioDanger22">
+                                    Deactive
+                                    </label>
+                                 </div>
                               </div>
                            </div>
+                           
                         </div>
                         <div class="form-group"><label for="blog_slug">Description</label><textarea id="summernote" name="description" required class="form-control" placeholder="Enter blog location">{{$printer->description}}</textarea></div>
                         <div class="form-group">

@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-@php
-   $settings = DB::table('settings')->first();
-@endphp
 <html lang="en">
    <head>
       <meta charset="utf-8">
@@ -31,12 +28,10 @@
       <link href="{{asset('public/assets/css/magnific-popup.css')}}" rel="stylesheet" />
       <link href="{{asset('public/assets/css/owl.carousel.min.css')}}" rel="stylesheet" />
       <link href="{{asset('public/assets/css/owl.theme.default.min.css')}}" rel="stylesheet" />
-      
       <link href="{{asset('public/assets/css/bootsnav.css')}}" rel="stylesheet" />
       <link href="{{asset('public/assets/css/style.css')}}" rel="stylesheet">
       <link href="{{asset('public/assets/css/responsive.css')}}" rel="stylesheet" />
       <link href="{{asset('public/assets/css/support.css')}}" rel="stylesheet" />
-
       <link rel="stylesheet" href="{{asset('public/assets/css/jquery-ui.css')}}">
       <link rel="stylesheet" href="{{asset('public/assets/css/colorchange.css')}}">
       <link rel="stylesheet" href="{{asset('public/assets/css/jquery-ui-timepicker-addon.css')}}">
@@ -47,124 +42,133 @@
          .banner-area div { height: inherit; }
          .brand-list  .owl-stage-outer .owl-item  {width: fit-content !important; }
          .pronter-list ul li.hidden {
-            border-bottom: none;
-            display: none;
-        }
-        nav.navbar.sticked .thesearch {
-            display: none;
-        }
-        .prsearch {
-            text-align: -webkit-center;
-            padding: 0 20px;
-        }
-        .hsear {
-            width: 450px;
-        }
-        nav.navbar.sticked .thesearch {display: none; }
-        .group { padding: 20px 0;}
-        a.next { margin:0 5px; }
-       .group a button{ padding: 5px 10px; border-radius: 10px; background: #ffff; font-size: 14px;margin-bottom:4px;   box-shadow: 0 1px 3px #000 !important;}
-       a.next  button:before { content: '<<'; padding-right: 2px;}
-       a.prev  button:after { content: '>>'; padding-left: 2px;}
-        .pronter-list ul li.hidden {
-            
-            border-bottom:none;
-            display: none;
-        }
-        .pronter-list ul li.hidden {
-      border-bottom: none;
-      display: none;
-      }
-      .themodal {
-      position: absolute;
-      top: 50%;
-      width: 70%;
-      }
+         border-bottom: none;
+         display: none;
+         }
+         nav.navbar.sticked .thesearch {
+         display: none;
+         }
+         .prsearch {
+         text-align: -webkit-center;
+         padding: 0 20px;
+         }
+         .hsear {
+         width: 450px;
+         }
+         nav.navbar.sticked .thesearch {display: none; }
+         .group { padding: 20px 0;}
+         a.next { margin:0 5px; }
+         .group a button{ padding: 5px 10px; border-radius: 10px; background: #ffff; font-size: 14px;margin-bottom:4px;   box-shadow: 0 1px 3px #000 !important;}
+         a.next  button:before { content: '<<'; padding-right: 2px;}
+         a.prev  button:after { content: '>>'; padding-left: 2px;}
+         .pronter-list ul li.hidden {
+         border-bottom:none;
+         display: none;
+         }
+         .pronter-list ul li.hidden {
+         border-bottom: none;
+         display: none;
+         }
+         .themodal {
+         position: absolute;
+         top: 50%;
+         width: 70%;
+         }
       </style>
    </head>
    <body class="index">
-      
       <div class="top-bar-area inc-pad bg-theme text-light">
-   <div class="container-fluid">
-      <div class="row align-items-center">
-         <div class="col-lg-12">
-            <div class="info text-center">
-               <ul>
-                  <li>FACING ISSUE WITH YOUR PRINTER ? <a href="#!" class="cons" data-toggle="modal" data-target="#exampleModal"> BOOK FREE CONSULTATION</a></li>
-               </ul>
+         <div class="container-fluid">
+            <div class="row align-items-center">
+               <div class="col-lg-12">
+                  <div class="info text-center">
+                     <ul>
+                        <li>FACING ISSUE WITH YOUR PRINTER ? <a href="#!" class="cons" data-toggle="modal" data-target="#exampleModal"> BOOK FREE CONSULTATION</a></li>
+                     </ul>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
-   </div>
-</div>
-<!-- header -->
-<header id="home">
-   <!-- Start Navigation -->
-   <div class="wrap-sticky mins" style="height: 80px;">
-      <nav class="navbar navbar-default active-border navbar-sticky bootsnav on menu-center no-full">
-         <div class="container-fluid">
-            <!-- Start Atribute Navigation -->
-            <div class="attr-nav inc-border info">
-               <ul class="tphd">
-                  <li class="thesearch">
-                     <div class="input-group">
-                        <div class="form-outline">
-                           <input type="search" id="search1" class="form-control rounded-5" placeholder="search" />
-                        </div>
-                     </div>
-                  </li>
-                  <li class="contact text-center">
-                     <a class="himg"><i class="fa fa-phone"></i>Call us today</a>
-                     <a href="tel:{{$settings->usnum}}">&nbsp; &#127482;&#127480;{{$settings->usnum}}</a>
-                     <a href="tel:{{$settings->uknum}}"> &#127468;&#127463; {{$settings->uknum}}</a>
-                  </li>
-               </ul>
-            </div>
-            
-            <div class="navbar-header">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-               <i class="fa fa-bars"></i>
-               </button>
-               <a class="navbar-brand" href="{{url('/')}}">
-               <img src="@if($settings) {{url('public/'.$settings->logo)}} @endif" class="logo" alt="printertales logo" />
-               </a>
-            </div>
-            <!-- End Header Navigation -->
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar-menu">
-               <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-                  <li class="dropdown">
-                     <a href="{{url('/')}}" class="active">Home</a>
-                  </li>
-                  <li class="dropdown">
-                     <a href="{{url('contact')}}" class="active">Contact Us</a>
-                  </li>
-                  <li class="dropdown">
-                     <a href="{{url('knowledgebase')}}" class="active">Knowledge base</a>
-                  </li>
-                  <li class="dropdown">
-                     <a href="/support" class="active">Support</a>
-                  </li>
-                  <li class="dropdown">
-                     <a href="https://printertales.com/beta/service" class="active">Services</a>
-                  </li>
-                  <li class="dropdown">
-                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">All PRINTER</a>
-                     <ul class="dropdown-menu child fadeOutUp" style="display: none; opacity: 1;">
-                  </ul>
-                  </li>
-               </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+      <!-- header -->
+      <header id="home">
+         <!-- Start Navigation -->
+         <div class="wrap-sticky mins" style="height: 80px;">
+            <nav class="navbar navbar-default active-border navbar-sticky bootsnav on menu-center no-full">
+               <div class="container-fluid">
+                  <!-- Start Atribute Navigation -->
+                  <div class="attr-nav inc-border info">
+                     <ul class="tphd">
+                        <li class="thesearch">
+                           <div class="input-group">
+                              <div class="form-outline">
+                                 <input type="search" id="search1" class="form-control rounded-5" placeholder="search" />
+                              </div>
+                           </div>
+                        </li>
+                        <li class="contact text-center">
+                           <a class="himg"><i class="fa fa-phone"></i>Call us today</a>
+                           <a href="tel:{{$settings->usnum}}">&nbsp; &#127482;&#127480;{{$settings->usnum}}</a>
+                           <a href="tel:{{$settings->uknum}}"> &#127468;&#127463; {{$settings->uknum}}</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                     <i class="fa fa-bars"></i>
+                     </button>
+                     <a class="navbar-brand" href="{{url('/')}}">
+                     <img src="@if($settings) {{url('public/'.$settings->logo)}} @endif" class="logo" alt="printertales logo" />
+                     </a>
+                  </div>
+                  <!-- End Header Navigation -->
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="navbar-menu">
+                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="dropdown">
+                           <a href="{{url('/')}}" class="active">Home</a>
+                        </li>
+                        <li class="dropdown">
+                           <a href="{{url('contact')}}" class="active">Contact Us</a>
+                        </li>
+                        <li class="dropdown">
+                           <a href="{{url('knowledgebase')}}" class="active">Knowledge base</a>
+                        </li>
+                        <li class="dropdown">
+                           <a href="{{url('support')}}" class="active">Support</a>
+                        </li>
+                        <li class="dropdown">
+                           <a href="https://printertales.com/beta/service" class="active">Services</a>
+                        </li>
+                       <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">All PRINTER</a>
+                           <ul class="dropdown-menu child fadeOutUp" style="display: none; opacity: 1;">
+                              @foreach($popularbrandprinters as $list)
+                                 <li class="dropdown list">
+                                    <a href="#" class="dropdown">{{$list->name}}</a>
+                                    <ul class="dropdown_child">
+                                       @foreach($list->printer as $printerlist)
+                                          <li>
+                                             <a href="{{url($list->slug.'/'.$printerlist->slug)}}">{{$printerlist->name}}</a>
+                                          </li>
+                                       @endforeach
+                                    </ul>
+                                 </li>
+                              @endforeach
+                           </ul>
+                        
+                        </li>
+                        
+                     </ul>
+                  </div>
+                  <!-- /.navbar-collapse -->
+               </div>
+            </nav>
          </div>
-      </nav>
-   </div>
-   <!-- End Navigation -->
-</header>
-   
-   @yield('content')
-
-<footer style="background:linear-gradient(257.39deg,#03273aa8,#0171ad);">
+         <!-- End Navigation -->
+      </header>
+      @yield('content')
+      <footer style="background:linear-gradient(257.39deg,#03273aa8,#0171ad);">
          <div class="container-fluid">
             <div class="f-items default-padding">
                <div class="row">
@@ -175,11 +179,10 @@
                      </div>
                      <ul class="social-media d-flex">
                         @php
-                           $slinks = DB::table('sociallinks')->get();
+                        $slinks = DB::table('sociallinks')->get();
                         @endphp
-
                         @foreach($slinks as $link)
-                           <li class="{{$link->name}}"><a href="{{$link->link}}" target="_blank"><i class="fab fa-{{$link->name}}"></i></a></li>
+                        <li class="{{$link->name}}"><a href="{{$link->link}}" target="_blank"><i class="fab fa-{{$link->name}}"></i></a></li>
                         @endforeach
                      </ul>
                   </div>
@@ -208,7 +211,6 @@
                   <div class="col-lg-2 col-md-6 col-6 item">
                      <div class="f-item link">
                         <h4 class="widget-title">Issues We Resolve</h4>
-                      
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6 item">
@@ -334,13 +336,11 @@
       <div class="fix-social">
          <ul class="social-box">
             @php
-               $slinks = DB::table('sociallinks')->get();
+            $slinks = DB::table('sociallinks')->get();
             @endphp
-
             @foreach($slinks as $link)
-               <li class="{{$link->name}}"><a href="{{$link->link}}" target="_blank"><i class="fab fa-{{$link->name}}"></i></a></li>
+            <li class="{{$link->name}}"><a href="{{$link->link}}" target="_blank"><i class="fab fa-{{$link->name}}"></i></a></li>
             @endforeach
-            
          </ul>
       </div>
       <a id="back2Top" class="theme-bg" title="Back to top" href="javascript-void(0)" style="display: block;"><i class="ti-arrow-up"></i></a>
@@ -367,7 +367,6 @@
       <script src="{{asset('public/assets/js/jquery-ui.js')}}"></script>
       <script src="{{asset('public/assets/js/colorchange.js')}}"></script>
       <script src="{{asset('public/assets/js/search.js')}}"></script>
-       
       <script>
          $('#search1 [data-search]').on('keyup', function() {
          var searchVal = $(this).val();
@@ -442,98 +441,114 @@
           
       </script> 
       <script>
-            $(document).ready(function () {
-    var owl = $('.owl-brand');
-    owl.owlCarousel({
-        items:6,
-        rtl: false,
-        dots:true,
-        loop: true,
-        margin: 10,
-        padding:0,
-        fluidSpeed:true,
-        slideTransition: 'linear',
-        autoplayTimeout: 0,
-        autoplayHoverPause: false,
-        responsive: {
-        0:{
-          loop: true,
-          items:2 
-        },
-        480:{
-        loop: true,
-          items: 4 
-        },
-        769:{
-          items: 6,
-          loop: true
-        },
+         $(document).ready(function () {
+         var owl = $('.owl-brand');
+         owl.owlCarousel({
+         items:6,
+         rtl: false,
+         dots:true,
+         loop: true,
+         margin: 10,
+         padding:0,
+         fluidSpeed:true,
+         slideTransition: 'linear',
+         autoplayTimeout: 0,
+         autoplayHoverPause: false,
+         responsive: {
+         0:{
+         loop: true,
+         items:2 
+         },
+         480:{
+         loop: true,
+         items: 4 
+         },
+         769:{
+         items: 6,
+         loop: true
+         },
          
          1200:{
-        items: 8 ,
-        loop: true
-        }
-    }
-
-    });
-
-});
-  </script>
-   <script>
-      $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-   </script>
-   <script>
-      $("#thesearch").on("keyup", function () {
-          var value = $(this).val().toLowerCase();
-          $(".single-item ").filter(function () {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-          });
-      });
-  </script>
-     <script src="{{asset('public/assets/js/carousel2.js')}}"></script>
-   
-     <script>
-      $(document).ready(function(){
-      
-      function load_data(full_text_search_query = '')
-       {
-        var _token = $("input[name=_token]").val();
-         console.log(_token);
-        $.ajax({
-         url:"{{ route('homesearch') }}",
-         method:"POST",
-         data:{full_text_search_query:full_text_search_query, _token:_token},
-         dataType:"json",
-         success:function(data)
-         {
-            console.log(data)
-          var output = '';
-          if(data.length > 0)
-          {
-           for(var count = 0; count < data.length; count++)
-           {
-            output += '<li>Knowledgebase | <a href={{url('knowledgebase')}}/'+data[count].slug+'>'+data[count].title+'</a></li>';
-           }
-          }
-          else
-          {
-           output += '<p colspan="6">No Data Found</p>';
-          }
-          $(".manual-list").css("display", "block");
-          $('.list-unstyled').html(output);
+         items: 8 ,
+         loop: true
          }
-        });
-       }
-      
-       $('#homesearch').keyup(function(){
-        var full_text_search_query = $('#homesearch').val();
-        console.log(full_text_search_query);
-         load_data(full_text_search_query);
-       });
-      
-      });
+         }
+         
+         });
+         
+         });
+      </script>
+      <script>
+         $( function() {
+         $( "#datepicker" ).datepicker();
+         } );
+      </script>
+      <script>
+         $("#thesearch").on("keyup", function () {
+             var value = $(this).val().toLowerCase();
+             $(".single-item ").filter(function () {
+                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+             });
+         });
+      </script>
+      <script src="{{asset('public/assets/js/carousel2.js')}}"></script>
+      <script>
+         $(document).ready(function(){
+         
+         function load_data(full_text_search_query = '')
+          {
+           var _token = $("input[name=_token]").val();
+            $.ajax({
+            url:"{{ route('homesearch') }}",
+            method:"POST",
+            data:{full_text_search_query:full_text_search_query, _token:_token},
+            dataType:"json",
+            success:function(data)
+            {
+               var output = '';
+               if(data.length > 0) {
+                  for(var count = 0; count < data.length; count++){
+                        output += '<li>Blog | <a href={{url('knowledgebase')}}/'+data[count].slug+'>'+data[count].title+'</a></li>';
+                  }
+             } else {
+              output += '<p colspan="6">No Blog Found</p>';
+             }
+             output += '<li class="printersearch"> </li>';
+             $(".manual-list").css("display", "block");
+             $('.list-unstyled').html(output);
+            }
+           });
+         
+           $.ajax({
+            url:"{{ route('homesearchprinter') }}",
+            method:"POST",
+            data:{full_text_search_query:full_text_search_query, _token:_token},
+            dataType:"json",
+            success:function(data)
+            {
+               var output = '';
+               if(data.length > 0) {
+                  for(var count = 0; count < data.length; count++){
+                        output += '<li>Printer | <a href={{url("/")}}/'+data[count].brand.slug+'/'+data[count].slug+'>'+data[count].name+'</a></li>';
+                  }
+             } else {
+              output += '<p colspan="6">No Printer Found</p>';
+             }
+             $(".manual-list").css("display", "block");
+             $('.printersearch').html(output);
+            }
+           });
+         
+         
+          }
+         
+          $('#homesearch').keyup(function(){
+           var full_text_search_query = $('#homesearch').val();
+           console.log(full_text_search_query);
+            load_data(full_text_search_query);
+          });
+         
+         });
       </script>  
    </body>
 </html>

@@ -78,22 +78,35 @@
                                  <input type="text" name="metakeywords" class="form-control" id="metakeywords" placeholder="Keywords" value="{{$brand->metakeywords}}" required>
                               </div>
                               <div class="form-group clearfix">
-                              <label>
-                              Status: 
-                              </label>
-                              <div class="icheck-success d-inline">
-                                 <input type="radio" name="status" value="1" id="radioSuccess1" @if($brand->status == 1)checked="" @endif>
-                                 <label for="radioSuccess1" >
-                                 Active
-                                 </label>
+                                 <label> Status: </label>
+                                 <div class="icheck-success d-inline">
+                                    <input type="radio" name="status" value="1" id="radioSuccess1" @if($brand->status == 1)checked="" @endif>
+                                    <label for="radioSuccess1" >
+                                    Active
+                                    </label>
+                                 </div>
+                                 <div class="icheck-danger d-inline">
+                                    <input type="radio" name="status" value="0" @if($brand->status == 0)checked="" @endif id="radioDanger2">
+                                    <label for="radioDanger2">
+                                    Deactive
+                                    </label>
+                                 </div>
                               </div>
-                              <div class="icheck-danger d-inline">
-                                 <input type="radio" name="status" value="0" @if($brand->status == 0)checked="" @endif id="radioDanger2">
-                                 <label for="radioDanger2">
-                                 Deactive
-                                 </label>
+                              <div class="form-group clearfix">
+                                 <label> Popular: </label>
+                                 <div class="icheck-success d-inline">
+                                    <input type="radio" name="popular" value="1" id="radioSuccess11" @if($brand->popular == 1)checked="" @endif>
+                                    <label for="radioSuccess11" >
+                                    Active
+                                    </label>
+                                 </div>
+                                 <div class="icheck-danger d-inline">
+                                    <input type="radio" name="popular" value="0" @if($brand->popular == 0)checked="" @endif id="radioDanger2 2">
+                                    <label for="radioDanger22">
+                                    Deactive
+                                    </label>
+                                 </div>
                               </div>
-                           </div>
                            </div>
                            
                         </div>

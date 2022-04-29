@@ -73,6 +73,7 @@ Route::get('knowledgebase',[FrontController::class,'blog'])->name('blog');
 Route::get('knowledgebase/{slug}',[FrontController::class,'blogdetail']);
 
 Route::post('homesearch',[FrontController::class,'homesearch'])->name('homesearch');
+Route::post('homesearchprinter',[FrontController::class,'homesearchprinter'])->name('homesearchprinter');
 Route::get('{slug1}/{slug2}',[FrontController::class, 'printerdetails']);
 Route::get('{slug}',[FrontController::class, 'details']);
 // Route::get('/home', [HomeController::class, 'index'])->name('home');

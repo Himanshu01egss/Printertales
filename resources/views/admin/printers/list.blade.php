@@ -39,6 +39,7 @@
                               <th>Brand</th>
                               <th>Image</th>
                               <th>Status</th>
+                              <th>Popular</th>
                               <th>Created At</th>
                               <th>Actions</th>
                            </tr>
@@ -59,6 +60,13 @@
                                   <span class="badge badge-danger">Deactive</span>
                                 @endif
                               </td>
+                              <td>
+                                 @if($item->popular==1)
+                                   <span class="badge badge-success">Yes</span>
+                                 @else
+                                   <span class="badge badge-danger">No</span>
+                                 @endif
+                               </td>
                               <td>{{ \Carbon\Carbon::parse($item->created_at)->diffForHumans() }}</td>
                               <td>
                                  <h6> No. of Features : {{count($item->features)}}</h6>

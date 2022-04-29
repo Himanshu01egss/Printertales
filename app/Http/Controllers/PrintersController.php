@@ -55,6 +55,7 @@ class PrintersController extends Controller
         $printer->brand_id = $request->brandid;
         $printer->description = $request->description;
         $printer->status = $request->status;
+        $printer->popular = $request->popular;
 
         $save = $printer->save();
 
@@ -125,6 +126,7 @@ class PrintersController extends Controller
         $printer->description = $request->description;
         $printer->status = $request->status;
         $printer->brand_id = $request->brandid;
+        $printer->popular = $request->popular;
         $save = $printer->save();
 
         if ($save) {

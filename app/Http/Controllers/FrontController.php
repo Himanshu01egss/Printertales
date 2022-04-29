@@ -8,12 +8,22 @@ use App\Models\Blog;
 use App\Models\Printer;
 use App\Models\Brandissue;
 use App\Models\Contact;
+use App\Models\Setting;
 use App\Models\Testimonial;
 use Mail;
 use App\Mail\ContactMailer;
+use View;
 
 class FrontController extends Controller
 {
+    public function __construct()
+    {
+        $popularbrandprinters = Brand::with(['printer'=>function($query){
+            return $query->where('popular',1);
+        }])->where('popular',1)->limit(4)->get();
+        $settings = Setting::first();
+        View::share(compact('popularbrandprinters','settings'));
+    }
     public function index(){ 
         $brand = Brand::orderby('id','Desc')->get();
         $blog = Blog::orderby('id','Desc')->limit(4)->get();
@@ -102,8 +112,12 @@ class FrontController extends Controller
 
     public function homesearch(Request $request){
         $value = $request->full_text_search_query;
-        $result[] = Printer::where('name','like', "%{$value}%")->get();
-        $result[] = Blog::where('title', 'like', "%{$value}%")->get();
+        $result = Blog::where('title', 'like', "%{$value}%")->get();
+        return $result;
+    }
+    public function homesearchprinter(Request $request){
+        $value = $request->full_text_search_query;
+        $result = Printer::with('brand')->where('name', 'like', "%{$value}%")->get();
         return $result;
     }
 
