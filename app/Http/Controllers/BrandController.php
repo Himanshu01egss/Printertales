@@ -22,6 +22,10 @@ class BrandController extends Controller
     }
     public function store(Request $request)
     {
+        $count = Brand::where('slug',$request->slug)->count();
+        if( $count != 0 )
+            return 1;
+        )
         $this->validate($request, [
             'image' => 'mimes:jpeg,png,bmp,tiff,gif,webp,jpg |max:40960',
         ],
@@ -54,6 +58,7 @@ class BrandController extends Controller
         $brand->image = $imgUrl;
         $brand->description = $request->description;
         $brand->status = $request->status;
+        $brand->popular = $request->popular;
         $save = $brand->save();
 
         if ($save) {
@@ -123,6 +128,7 @@ class BrandController extends Controller
         $brand->image = $imgUrl;
         $brand->description = $request->description;
         $brand->status = $request->status;
+        $brand->popular = $request->popular;
         $save = $brand->save();
 
         if ($save) {

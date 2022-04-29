@@ -44,8 +44,16 @@
          </div>
       </div>
       <div class="row">
-          
-        
+         @foreach($popularbrandprinters as $list)
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+               <h2 class="h2">{{$list->name}}</h2>
+               <ul>
+                  @foreach($list->printer as $printerlist)
+                  <li><a href="{{url($list->slug.'/'.$printerlist->slug)}}">{{$printerlist->name}}</a></li>
+                  @endforeach
+               </ul>
+            </div>
+         @endforeach
       </div>
    </div>
 </div>

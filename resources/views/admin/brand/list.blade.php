@@ -38,6 +38,7 @@
                               <th>Name</th>
                               <th>Image</th>
                               <th>Status</th>
+                              <th>Popular</th>
                               <th>No. of Issues</th>
                               <th>Actions</th>
                            </tr>
@@ -56,6 +57,13 @@
                                   <span class="badge badge-danger">Deactive</span>
                                 @endif
                               </td>
+                              <td>
+                                 @if($item->popular==1)
+                                   <span class="badge badge-success">Yes</span>
+                                 @else
+                                   <span class="badge badge-danger">No</span>
+                                 @endif
+                               </td>
                               <td>{{count($item->brandissue)}}</td>
                               <td>
                                  @php $itemid= Crypt::encrypt($item->id); @endphp

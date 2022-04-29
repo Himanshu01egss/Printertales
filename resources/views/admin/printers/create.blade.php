@@ -86,9 +86,7 @@
                               	</div>
                            </div>
                            <div class="form-group clearfix">
-                              <label>
-                              Status: 
-                              </label>
+                              <label>Status: </label>
                               <div class="icheck-success d-inline">
                                  <input type="radio" name="status" value="1" id="radioSuccess1">
                                  <label for="radioSuccess1">
@@ -98,6 +96,21 @@
                               <div class="icheck-danger d-inline">
                                  <input type="radio" name="status" value="0" checked="" id="radioDanger2">
                                  <label for="radioDanger2">
+                                 Deactive
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="form-group clearfix">
+                              <label> Popular: </label>
+                              <div class="icheck-success d-inline">
+                                 <input type="radio" name="popular" value="1" id="radioSuccess11">
+                                 <label for="radioSuccess11">
+                                 Active
+                                 </label>
+                              </div>
+                              <div class="icheck-danger d-inline">
+                                 <input type="radio" name="popular" value="0" checked="" id="radioDanger22">
+                                 <label for="radioDanger22">
                                  Deactive
                                  </label>
                               </div>
