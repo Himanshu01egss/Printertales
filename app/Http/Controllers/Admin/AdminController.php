@@ -83,6 +83,7 @@ class AdminController extends Controller
         $setting->uknum = $request->uknum;
         $setting->logo = $imgUrl;
         $setting->fevicon = $imgUrl2;
+        $setting->webindex = $request->webindex;
         $setting->footercontent = $request->content;
         $save = $setting->save();
 

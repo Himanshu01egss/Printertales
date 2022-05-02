@@ -35,7 +35,7 @@
                      <div class="card-body">
                         <div class="row">
                            <div class="col-md-6">
-                              <div class="form-group"><label for="name">Site Name</label><input type="text" name="name" class="form-control" id="name" placeholder="Site name" @if($setting) value="{{$setting->sitename}}" @endif required></div>
+                               <div class="form-group"><label for="name">Site Name</label><input type="text" name="name" class="form-control" id="name" placeholder="Site name" @if($setting) value="{{$setting->sitename}}" @endif required></div>
                               <div class="form-group"><label for="email">Email</label><input type="email" name="email" @if($setting) value="{{$setting->email}}" @endif class="form-control" id="email" placeholder="Site Email" required></div>
                               <div class="form-group"><label for="usnum">US Number</label><input type="text" name="usnum" class="form-control" @if($setting) value="{{$setting->usnum}}" @endif id="usnum" placeholder="US Nunber" required></div>
                               <div class="form-group"><label for="uknum">UK Number</label><input type="text" name="uknum"  @if($setting) value="{{$setting->uknum}}" @endif class="form-control" id="uknum" placeholder="UK Nunber" required></div>
@@ -82,6 +82,24 @@
                                  <div class="alert alert-danger">{{ $message }}</div>
                                  @enderror
                               </div>
+
+                              <div class="form-group clearfix">
+                                 <label>
+                                     Website Index: 
+                                 </label>
+                                 <div class="icheck-success d-inline">
+                                     <input type="radio" name="webindex" value="1" id="radioSuccess1" @if($setting->webindex==1) checked="" @endif>
+                                     <label for="radioSuccess1">
+                                         Index
+                                     </label>
+                                 </div>
+                                 <div class="icheck-danger d-inline">
+                                     <input type="radio" name="webindex" value="0"  id="radioDanger2" @if($setting->webindex==0) checked="" @endif>
+                                     <label for="radioDanger2">
+                                         No Index
+                                     </label>
+                                 </div>
+                             </div>
                            </div>
                            
                         </div>

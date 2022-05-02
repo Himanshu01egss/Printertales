@@ -74,7 +74,12 @@ Route::get('knowledgebase/{slug}',[FrontController::class,'blogdetail']);
 
 Route::post('homesearch',[FrontController::class,'homesearch'])->name('homesearch');
 Route::post('homesearchprinter',[FrontController::class,'homesearchprinter'])->name('homesearchprinter');
+Route::post('printersearch',[FrontController::class,'printersearch'])->name('printersearch');
+
+Route::post('support',[FrontController::class,'supportform'])->name('supportform');
+Route::post('issuesubmit',[FrontController::class,'issuesubmit'])->name('issuesubmit');
 Route::get('{slug1}/{slug2}',[FrontController::class, 'printerdetails']);
 Route::get('{slug}',[FrontController::class, 'details']);
+
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Route::get('/knowledgebase', [HomeController::class, 'blog'])->name('blog');

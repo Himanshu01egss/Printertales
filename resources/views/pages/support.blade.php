@@ -10,14 +10,14 @@
                   <h1 class="main-head">Get your Solutions just <span>ANSWER</span> below <span>questions</span>:</h1>
                </div>
                <div class="live-chat-m">
-                  <img src="https://bestsoftwaressearch.com/public/frontend/img/chat-icon.png" />
-                  <h4><a href="https://tawk.to/chat/61f40112b9e4e21181bc61ff/1fqgi8d3q" target="_blank">Live Chat</a></h4>
+                  <img src="{{url('public/frontend/img/chat-icon.png')}}" />
+                  <h4><a href="{{url('chat')}}" target="_blank">Live Chat</a></h4>
                </div>
             </div>
             <div class="row justify-content-center">
                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
                   <div id="res_msg"></div>
-                  <form id="regForm" action="#" method="POST">
+                  <form id="regForm" action="{{url('support')}}" method="POST">
                      @csrf
                      <div class="tab">
                         <div class="row justify-content-center text-left head-f">
@@ -194,8 +194,8 @@
                      <div style="overflow: auto;">
                         <div class="text-center">
                            <button class="btn" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                           <button class="btn" id="nextBtn">Next</button>
-                           <button class="btn" type="submit" name="submit" id="nextBtn2">Next</button>
+                           <button class="btn" type="button" id="nextBtn">Next</button>
+                           <button class="btn" type="submit" id="nextBtn2">Next</button>
                         </div>
                      </div>
                      <!-- Circles which indicates the steps of the form: -->

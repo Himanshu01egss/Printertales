@@ -22,10 +22,15 @@ class BrandController extends Controller
     }
     public function store(Request $request)
     {
-        $count = Brand::where('slug',$request->slug)->count();
-        if( $count != 0 )
-            return 1;
-        )
+        $slug = $this->slugify($request->name);
+        $count = Brand::where('slug', $slug)->count();
+            if( $count != 0 ){
+                $msg = array(
+                    'message' => 'Brand Already Added',
+                    'alert-type' => 'danger'
+                );
+                return redirect()->back()->with($msg);
+            };
         $this->validate($request, [
             'image' => 'mimes:jpeg,png,bmp,tiff,gif,webp,jpg |max:40960',
         ],

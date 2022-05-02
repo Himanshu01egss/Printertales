@@ -5,22 +5,51 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <link rel="icon" type="image/png" href="">
-      <title>App Name - @yield('title')</title>
-      <meta name="description" content="">
-      <meta name="keywords" content="">
-      <meta name="robots" content="index, follow"/>
-      <meta name="googlebot" content="index, follow"/>
-      <meta name="bingbot" content="index, follow"/>
-      <meta property="og:title" content="" />
-      <meta property="og:type" content="Website" />
-      <meta property="og:url" content="" />
-      <meta property="og:image" content="" />
-      <meta name="twitter:card" content="summary">
-      <meta name="twitter:description" content="">
-      <meta name="twitter:title" content="">
-      <meta name="twitter:image" content="">
-      <meta name="twitter:site" content="">
-      <link rel="canonical" href="" />
+      @if(isset($meta))
+         <title>{{$meta['metatitle']}}</title>
+         <meta name="description" content="{{$meta['metadescription']}}">
+         <meta name="keywords" content="{{$meta['metakeywords']}}">
+         <meta property="og:locale" content="en_US" />
+      	<meta property="og:type" content="website" />
+      	<meta property="og:site_name" content="{{config('app.name') }}" />
+      	<meta property="og:title" content="{{$meta['metatitle']}}"/>
+      	<meta property="og:description" content="{{$meta['metadescription']}}"/>
+      	<meta property="og:url" content="{{url()->full()}}"/>
+      	<meta property="og:image" content="{{url('public/'.$meta['image'])}}"/>
+      	<meta property="og:image:type" content="image/jpeg" />
+      	<meta name="twitter:card" content="summary">
+         <meta name="twitter:title" content="{{$meta['metatitle']}}">
+         <meta name="twitter:description" content="{{$meta['metadescription']}}">
+         <meta name="twitter:image" content="{{url('public/'.$meta['image'])}}">
+         <meta name="twitter:site" content="{{config('app.name') }}">
+      @else 
+         <title>{{config('app.name') }}</title>
+         <meta name="description" content="{{config('app.name') }}">
+         <meta name="keywords" content="{{config('app.name') }}">
+         <meta property="og:title" content="{{config('app.name') }}" />
+         <meta property="og:type" content="Website" />
+         <meta property="og:url" content="{{url()->full()}}" />
+         <meta property="og:image" content="@if($settings) {{url('public/'.$settings->logo)}} @endif" />
+         <meta name="twitter:card" content="summary">
+         <meta name="twitter:description" content="{{config('app.name') }}">
+         <meta name="twitter:title" content="{{config('app.name') }}">
+         <meta name="twitter:image" content="@if($settings) {{url('public/'.$settings->logo)}} @endif">
+         <meta name="twitter:site" content="{{config('app.name') }}">
+      @endif
+      
+      @if(isset($settings) && $settings->webindex == 1)
+         <meta name="robots" content="index, follow"/>
+         <meta name="googlebot" content="index, follow"/>
+         <meta name="bingbot" content="index, follow"/>
+      @else
+         <meta name="robots" content="noindex, nofollow"/>
+         <meta name="googlebot" content="noindex, nofollow"/>
+         <meta name="bingbot" content="noindex, nofollow"/>
+      @endif
+
+      <link rel="canonical" href="{{url()->full()}}" />
+      <link rel="alternate" href="{{url()->full()}}" hreflang="x-default" />
+
       <link href="{{asset('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" />
       <link href="{{asset('public/assets/css/font-awesome.min.css')}}" rel="stylesheet" />
       <link href="{{asset('public/assets/css/themify-icons.css')}}" rel="stylesheet" />
@@ -33,9 +62,11 @@
       <link href="{{asset('public/assets/css/responsive.css')}}" rel="stylesheet" />
       <link href="{{asset('public/assets/css/support.css')}}" rel="stylesheet" />
       <link rel="stylesheet" href="{{asset('public/assets/css/jquery-ui.css')}}">
+      <link rel="stylesheet" href="{{asset('public/assets/css/form.css')}}" />
       <link rel="stylesheet" href="{{asset('public/assets/css/colorchange.css')}}">
       <link rel="stylesheet" href="{{asset('public/assets/css/jquery-ui-timepicker-addon.css')}}">
-      <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+      <link rel="stylesheet" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
       <style>
          .pronter-list ul li.hidden { border-bottom:none; display: none;}
          .banner-area{ overflow: initial;  }
@@ -75,6 +106,9 @@
          width: 70%;
          }
       </style>
+
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      {{-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> --}}
    </head>
    <body class="index">
       <div class="top-bar-area inc-pad bg-theme text-light">
@@ -344,7 +378,7 @@
          </ul>
       </div>
       <a id="back2Top" class="theme-bg" title="Back to top" href="javascript-void(0)" style="display: block;"><i class="ti-arrow-up"></i></a>
-      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      
       {{-- <script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
       <script src="{{asset('public/assets/js/popper.min.js')}}"></script>
       <script src="{{asset('public/assets/js/bootstrap.min.js')}}"></script>
@@ -365,9 +399,10 @@
       <script src="{{asset('public/assets/js/main.js')}}"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
       <script src="{{asset('public/assets/js/jquery-ui.js')}}"></script>
+  
       <script src="{{asset('public/assets/js/colorchange.js')}}"></script>
-      <script src="{{asset('public/assets/js/search.js')}}"></script>
-      <script>
+      
+       <script>
          $('#search1 [data-search]').on('keyup', function() {
          var searchVal = $(this).val();
          var filterItems = $('#search1 [data-filter-item]');
@@ -547,8 +582,32 @@
            console.log(full_text_search_query);
             load_data(full_text_search_query);
           });
-         
+
+
+         $("#single").on("change",function(){
+            var printersearch = $('#single').val();
+            console.log(printersearch);
+            load_printer_data(printersearch);
          });
+
+         function load_printer_data(printersearch = '')
+          {
+            var _token = $("input[name=_token]").val();
+            $.ajax({
+            url:"{{ route('printersearch') }}",
+            method:"POST",
+            data:{printersearch:printersearch, _token:_token},
+            dataType:"json",
+            success:function(data)
+            {
+               console.log(data)
+               var output = '';
+               console.log(data.image);
+               $('#project-icon').attr('src', "../public/"+data.image);
+            }
+           });
+         }
+      });
       </script>  
    </body>
 </html>

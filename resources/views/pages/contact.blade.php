@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('content')
-@php
-   $setting = DB::table('settings')->first();
-@endphp
+
 <div class="clearfix"></div>
 <div class="about-area faq-area inc-shape default-padding pt-0">
    <div class="container">
@@ -12,8 +10,8 @@
             <div class="col-lg-6">
                <div class="callss">
                   <h1>Call Us.</h1>
-                  <h2 class="text-dark"><strong>US / CA : </strong> <a class="text-danger" href="tel:{{$setting->usnum}}"></a>{{$setting->usnum}}</h2>
-                  <h2 class="text-dark"><strong>UK : </strong><a class="text-danger" href="tel:{{$setting->uknum}}"></a> {{$setting->uknum}}</h2>
+                  <h2 class="text-dark"><strong>US / CA : </strong> <a class="text-danger" href="tel:{{$settings->usnum}}"></a>{{$settings->usnum}}</h2>
+                  <h2 class="text-dark"><strong>UK : </strong><a class="text-danger" href="tel:{{$settings->uknum}}"></a> {{$settings->uknum}}</h2>
                </div>
             </div>
             <div class="col-lg-6 brd">
@@ -152,8 +150,8 @@
             <h2 class="text-dark"><strong>Free Consultaion </strong></h2>
          </div>
          <div class="col-sm-8">
-            <h2 class="text-dark"><strong>US / CA : </strong> <a class="text-danger" href="tel:{{$setting->usnum}}"></a> {{$setting->usnum}}</h2>
-            <h2 class="text-dark"><strong>UK : </strong><a class="text-danger" href="tel:{{$setting->uknum}}"></a> {{$setting->uknum}}</h2>
+            <h2 class="text-dark"><strong>US / CA : </strong> <a class="text-danger" href="tel:{{$settings->usnum}}"></a> {{$settings->usnum}}</h2>
+            <h2 class="text-dark"><strong>UK : </strong><a class="text-danger" href="tel:{{$settings->uknum}}"></a> {{$settings->uknum}}</h2>
          </div>
       </div>
    </div>

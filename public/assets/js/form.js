@@ -2,21 +2,21 @@
       
       $(document).ready(function() {  
   
-         $("#search").on("keyup",function(){
-            $(".modalselect").css("display","block");    
-            var value = $(this).val().toLowerCase();
-            $(".modalselect a ").filter(function(){
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-             console.log(value);
-            });
+        //  $("#search").on("keyup",function(){
+        //     $(".modalselect").css("display","block");    
+        //     var value = $(this).val().toLowerCase();
+        //     $(".modalselect a ").filter(function(){
+        //     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        //     });
+        //      console.log(value);
+        //     });
 
-          $(".modalselect a ").click(function(){
-               const txt = $(this).text(); 
-               $("#search").val(txt);
-               $(".modalselect").css("display","none");
+        //   $(".modalselect a ").click(function(){
+        //        const txt = $(this).text(); 
+        //        $("#search").val(txt);
+        //        $(".modalselect").css("display","none");
                 
-            });   
+        //     });   
 
   
   // Random Alert shown for the fun of it
@@ -58,13 +58,13 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    // document.getElementById("nextBtn").innerHTML = "Submit";
     /*mi addition*/
      document.getElementById("prevBtn").style.display = "none";
      document.getElementById("nextBtn").style.display = "none";
     /* end mi addition*/
   } else {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    // document.getElementById("nextBtn").innerHTML = "Submit";
   }
   if (n == 1) {
     document.getElementById("nextBtn").style.display = "none";
@@ -73,6 +73,15 @@ function showTab(n) {
     document.getElementById("nextBtn").style.display = "inline";
     document.getElementById("nextBtn2").style.display = "none";
   }
+
+  if (n == 1) {
+    document.getElementById("nextBtn2").style.display = "inline";
+    document.getElementById("nextBtn").style.display = "none";
+  } else {
+    document.getElementById("nextBtn2").style.display = "none";
+    document.getElementById("nextBtn").style.display = "inline";
+  }
+  
   
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
@@ -97,7 +106,7 @@ function nextPrev(n) {
   showTab(currentTab);
 }
 
-
+$()
 
 
  
@@ -136,4 +145,12 @@ function fixStepIndicator(n) {
   x[n].className += " active";
 }
 
- 
+$("#nextBtn2").click(function(){
+ if (currentTab == 1){
+   $("#nextBtn2").hide();
+   $("#nextBtn").show();
+ }
+ else{
+  console.log("error");
+ }
+});
